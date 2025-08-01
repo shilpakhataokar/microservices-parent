@@ -28,15 +28,22 @@ POST `/api/broker/fraud-check` (JSON)
 
 **Config:**  
 Change `fcs.fraud-check.url` in `application.properties` if FCS is not running on localhost:8080.
-3. # Fraud  Check Service
-Receives XML payment requests via REST endpoint.
-Checks payer and payee details (name, country, bank) and payment instruction against configurable blacklists.
-Validates the structure and required fields of the incoming request.
-Approves or rejects payments, sending results back as XML.
-Returns clear messages:
-"Suspicious payment" if any check fails.
-"Nothing found, all okay" if all checks pass.
 
+3. # Fraud  Check Service (FCS)
+   
+- Receives XML payment requests via REST endpoint.
+- Checks payer and payee details (name, country, bank) and payment instruction against configurable blacklists.
+- Validates the structure and required fields of the incoming request.
+- Approves or rejects payments, sending results back as XML.
+- Returns clear messages:
+-"Suspicious payment" if any check fails.
+-"Nothing found, all okay" if all checks pass.
+
+**Run:**  
+`mvn spring-boot:run`
+
+**Endpoint:**  
+POST `/api/fraud-check` (JSON)
 
 ### Sample Request
 
