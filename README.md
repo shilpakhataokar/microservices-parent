@@ -43,7 +43,7 @@ Change `fcs.fraud-check.url` in `application.properties` if FCS is not running o
 `mvn spring-boot:run`
 
 **Endpoint:**  
-POST `/api/fraud-check` (JSON)
+POST `/api/fraud-check` (XML)
 
 ### Sample Request
 
